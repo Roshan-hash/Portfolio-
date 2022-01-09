@@ -1,0 +1,23 @@
+.app{
+  height: 100vh;
+  display: -webkit-inline-flex; // this use to remove the scrollbar 
+
+  .sections{
+    width: 100%;
+    height: calc(100vh-70px);
+    background-color: blueviolet;
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; // display none for scroll bar it will applicable for firefox
+      & ::-webkit-scrollbar {
+       display: block;
+    }
+    > *{
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
+}
